@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de divs</title>
+<head>
+	<style>
+        html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		.item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100px;
+			height: 100px;
+			background-color: #ccc;
+			font-size: 2rem;
+			font-weight: bold;
+			margin: 10px;
+		}
+		.item:nth-child(1) {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.item:nth-child(2) {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		.item:nth-child(3) {
+			position: relative;
+		}
+		.item:nth-child(4) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		.item:nth-child(5) {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	</style>
+	<script>
+		function pedirPosicion() {
+			var posicion = prompt("Dime la posición que quieres (Entre 1 y 5):");
+			var color = prompt("Dime el color que quieres (rojo, azul o amarillo):");
+			crearPiramide(posicion, color);
+		}
+		function crearPiramide(posicion, color) {
+			var elemento = document.getElementById("d" + posicion);
+			var altura = 5;
+			var caracteres = "";
+			// borra el contenido anterior
+			elemento.innerHTML = "";
+			switch(color) {
+				case "rojo":
+					elemento.style.backgroundColor = "red";
+					break;
+				case "amarillo":
+					elemento.style.backgroundColor = "yellow";
+					break;
+				case "azul":
+					elemento.style.backgroundColor = "blue";
+					break;
+				default:
+					alert("El color que has escrito no es válido");
+			}
+			for (var i = 0; i < altura; i++) {
+				caracteres += "#";
+				elemento.innerHTML += caracteres + "<br>";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="item" id="d1">1</div>
+		<div class="item" id="d2">2</div>
+		<div class="item" id="d3">3</div>
+		<div class="item" id="d4">4</div>
+		<div class="item" id="d5">5</div>
+	</div>
+	<script>
+		pedirPosicion();
+	</script>
+</body>
+</html>
