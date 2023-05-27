@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Autor: Álvaro Guerrero
+Trabajo Final 3er Trimestre
+Lenguajes de Marcas-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pathologic Classic HD Español</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+        <div>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./xml.html">XML</a></li>
+                <li><a href="">Pathologic Classic HD</a></li>
+                <li><a href="./ajustes.html">Ajustes</a></li>
+                <li><a href="#vModal">Modal</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <div id="usuario">
+      Usuario sin identificar <span id="nombre-usuario"></span>
+  </div>
+
+  <script>
+    //Para que el nombre de usuario se muestre en las distintas páginas
+    if (sessionStorage.getItem('usuario')) {
+      mostrarNombreUsuario();
+  }
+
+  function mostrarNombreUsuario() {
+      var usuario = sessionStorage.getItem('usuario');
+      document.getElementById('usuario').textContent = 'Usuario: ' + usuario;
+  }
+      
+// Para que se muestre modo claro u oscuro
+if (localStorage.getItem('modo') === 'oscuro') {
+  document.documentElement.setAttribute('data-modo', 'oscuro');
+}
+
+function cambiarModo() {
+  var modoActual = document.documentElement.getAttribute('data-modo');
+  var nuevoModo = (modoActual === 'claro') ? 'oscuro' : 'claro';
+  document.documentElement.setAttribute('data-modo', nuevoModo);
+  localStorage.setItem('modo', nuevoModo);
+}
+
+//Para cambiar tamaño y color fuente
+
+var fontSize = localStorage.getItem('fontSize');
+//var fontColor = localStorage.getItem('fontColor');
+
+// Aplicar estilos guardados en localStorage
+if (fontSize) {
+    document.body.style.fontSize = fontSize;
+}
+
+/*if (fontColor) {
+    document.body.style.color = fontColor;
+}*/
+
+  </script>
+    
+      <h1 id="presentacion1" class="Pathologic1">Pathologic Classic HD - Traducción al castellano</h1>
+    <section>
+      <div>
+        <img class="imagen" alt="pueblo" src="./images/Pueblo.jpg">
+        <br>
+      </div>
+      <header>
+      <div>
+        <p id="parrafo1">
+          En las grises y desoladoras estepas de Rusia, un pequeño pueblo sin
+          nombre, únicamente conocido como
+          <b>El pueblo a orillas del Gorkhon</b> es víctima de una epidemia
+          incontrolable. Tres personajes llegan a él, cada uno buscando su
+          propia redención. En lugar de ello, encontrarán dolor, muerte y
+          remordimiento, pero también lograrán, si consiguen sobrevivir 12 días,
+          ver quién mueve los hilos detrás de su sufrimiento terrenal... Esto es
+          <i>Pathologic</i>, uno de los juegos más extraños jamás creados, una
+          experiencia incomparable en muchos sentidos, aunque llena de
+          incomodidades, imperfecciones y molestias propias de su época original
+          (inicios de la década de los 2000), en la que lo importante no era dar
+          comodidad al jugador, sino ofrecer una experiencia única a un
+          <i>connoiseur</i>.
+        </p>
+        <br>
+        <br>
+        <br>
+        <h6 id="presentacion" class="Pathologic1">Bienvenido</h6><hr>
+        <br>
+        <p id="parrafo2">
+          <i>Pathologic</i> es un juego de aventura en formato de primera
+          persona desarrollado por el estudio ruso Ice-Pick Lodge para PC hace
+          más de una década. Sus creadores aseguran que se trata de un simulador
+          de epidemia, y lo es en muy buena medida, pero también es un RPG y un
+          juego de aventuras con una trama sin igual. Básicamente, se trata de
+          sobrevivir 12 días en una ciudad-matadero construida en el campo ruso,
+          en el lugar en el que los hombres civilizados y las razas nómadas de
+          la estepa, adoradores de demonios, convergen. Tres personajes llegan a
+          este lugar espantoso, cada uno con una visión sobre cómo redimirlo: el
+          Licenciado, un brillante estudiante de medicina de la capital que
+          busca investigar vidas anormalmente largas en busca de la
+          inmortalidad; el Arúspice, hijo de un curandero y chamán local que
+          conoce los caminos secretos de la estepa, y la Impostora, una joven
+          que ha perdido la razón y tiene un oscuro secreto.
+        </p>
+        <br>
+        <p id="parrafo3">
+          Sin embargo, las cosas en el pueblo pronto se revelan como una
+          pesadilla. Extrañas nubes de polvo y arena recorren las calles e
+          infectan a sus habitantes con una enfermedad incurable, un viento
+          maligno venido de la estepa. Las autoridades, un grupo de corruptas y
+          decadentes familias adineradas, están acorraladas por su ineficiencia,
+          sus rencillas internas y su miseria humana. El populacho, ávido de
+          vivir y matar, empieza a recurrir a los linchamientos y quemas
+          públicas. Las almas puras intentan en vano salvar a los inocentes. Y
+          mientras tanto, los niños del pueblo, que parecen conocer un secreto
+          que no dirán a nadie, juegan al apocalipsis y a hablar con seres
+          invisibles. En el extremo de la ciudad, un edificio guarda la clave de
+          esta locura: el Poliedro, un lugar que parece estar más allá de las
+          leyes del espacio y del tiempo. ¿Lograrás llegar a sus puertas? Y, sin
+          embargo, lo más siniestro es pensar quién nos abrirá la puerta...
+        </p>
+      </div>
+    </section>
+    <section>
+      <article>
+      <div>
+        <h6 id="presentacion" class="Pathologic1">Traduccion al castellano</h6><hr>
+        <br>
+        <p id="parrafo4">
+           ¡Vuelve el clásico de culto de la desarrolladora <i>Ice-Pick Lodge</i>, esta vez completamente traducido al castellano! Tras postularse como uno de los juegos con una narrativa más atractiva del medio, y después de triunfar con su secuela <i>Pathologic Classic HD</i> llega completamente traducido al lenguaje de Cervantes.
+            Una de las principales pegas que tenía este juego tras su lanzamiento era la complejidad para entender su enrevesada trama ya que solo contaba con los idiomas inglés y ruso para jugar. Por fin, y después de casi 10 años desde su publicación, toda persona hispanohablante podrá dejarse envolver por la historia que rodea al <b>pueblo a orillas del Gorkhon</b>.
+        </p>
+        <br>
+        <br>
+        <br>
+        <h6 id="presentacion" class="Pathologic1">Lo que hemos traducido:</h6><hr>
+        <br>
+        <p id="parrafo5">
+          En este proyecto de traducción en el que nos hemos embarcado hemos querido traducir la mayor cantidad de contenido posible, así como añadir funcionalidades que el juego original no tenía. Un ejemplo de esto es el poder añadir subtítulos tal como ocurre en Pathologic 2, la secuela. Sin embargo, nos encontramos con un escollo: el motor usado para el juego no permite poder implementar subtítulos <i>in-game</i>. Es por eso que, ante algunas escenas habladas en inglés que son relevantes para la trama, y que no teníamos forma de subtitular, hemos decidido doblar al castellano dichas escenas. 
+          Podrás encontrarlas en la representaciión que se hace en el Teatro al final de cada día.
+          Por otra parte, el juego contará con traducción al castellano tanto de todos los diálogos del juego, así como la interfaz (mapa, objetos, cartas, intro del juego...)
+        </p>
+        <br>
+        <br>
+        <div>
+          </header>
+          <img class="foto" alt="mapa" src="./images/p1 1.png">
+          <br>
+          <img class="foto" alt="intro" src="./images/p12.png">
+          <br>
+          <img class="foto" alt="arma" src="./images/p13.png">
+          <br>
+          <img class="foto" alt="carta" src="./images/p14.png">
+          <br>
+          <img class="foto" alt="hombre" src="./images/p15.png">
+          <br>
+          <img class="foto" alt="kain" src="./images/p16.png">
+          <br>
+          <img class="foto" alt="titulo" src="./images/p17.png">
+          <br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <h6 id="presentacion" class="Pathologic1">Porcentaje del proyecto</h6><hr>
+        <p id="parrafo5">
+          <div class="lista">
+          <ul>
+            <li>Traduccion: 20%</li>
+            <li>Correccion: - </li>
+            <li>Edicion de graficos: 95% </li>
+            <li>Betatesting: 20%</li>
+          </ul>
+        </div>
+        </p>
+      </div>
+    </article>
+    </section>
+    <section>
+      <div class="trailer">
+        <h6 id="presentacion" class="Pathologic1">Trailer del proyecto</h6><hr>
+        <br>
+        <br>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/y1m-WUGP4Mg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div id="vModal">
+        <p><br>
+          <br>Trabajo final realizado por Álvaro Guerrero - 1º DAM<br>
+          <br>
+           Rúbrica:
+           <br>
+           <br>
+           -Subido el domingo
+           <br>
+           -La URL dirige a la página de inicio
+           <br>
+           <br>
+           -Menú igual en todas las páginas y, si ves esto, es porque abre y cierra el modal. Desde el menú se puede acceder a las distintas páginas de la web y al propio modal.
+           <br>
+           <br>
+           -4 páginas: Inicio, donde se da la bienvenida al usuario al proyecto de traducción del videojuego, XML donde se muestra la canción de Sabaton mediante un iframe (en la cual no se aplican los ajustes de cambio de tamaño de letra ni el modo nocturno o diurno), una tercera página donde se habla de la propia traducción del juego, con imágenes, trailer y porcentaje de avance y una cuarta que es la página de ajustes.
+           <br>
+           <br>
+           -Página de ajustes donde se podrá iniciar y cerrar sesión. También se podrá elegir el tamaño de la fuente en las distintas páginas y se podrá seleccionar modo claro u oscuro, para mostrarse en esta y el resto de pantallas. <br>
+           Al cerrar el navegador, el nombre de usuario se perderá. Sin embargo, el modo elegido (claro u oscuro) permanecerá. <br>
+           El nombre del usuario cambiará según el nombre que introduzca en el formulario y luego pulse "Iniciar sesión". Este nombre se mostrará en todas las pantallas, incluida el XML. Además, también cambiará de tamaño o color dependiendo de si se ha elegido modo nocturno o diurno.<br>
+           <br>
+           -Poco que añadir con respecto al modal. El tamaño de la fuente también cambia dependiendo del elegido por el usuario.
+           <br>
+           <br>
+           -XML que muestra mediante un iframe una canción de Sabaton, mi grupo favorito, y que suelo escuchar a menudo mientras traduzco este videojuego. En esta pagina no se van a aplicar los ajustes de cambio de tamaño de letra (excepto el nombre de usuario, que sí cambia) pero sí el modo nocturno o diurno, a pesar de que con este último la letra no se leería bien.
+           <br>
+           <br>
+           JavaScript usado para el inicio y cierre de sesión, para el cambio de modo (claro u oscuro) y para el cambio de tamaño de la fuente.
+           <br>
+           <br>
+           HTML usado para las distintas páginas.
+           <br>
+           <br>
+           Nombre del usuario se mantiene visible en TODAS las páginas, y además su tamaño cambia según el tamaño que haya elegido el usuario.
+             <a href="#" id="cerrarModal"><button>Haz click aqui para cerrar</button></a>
+        </p>
+        </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML</title>
+    <link rel="stylesheet" href="stylemenu.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+            <div>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="">XML</a></li>
+                    <li><a href="./p2.html">Pathologic Classic HD</a></li>
+                    <li><a href="./ajustes.html">Ajustes</a></li>
+                    <li><a href="#vModal">Modal</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="usuario">
+        Usuario sin identificar <span id="nombre-usuario"></span>
+    </div>
+    <script>
+                // Para que se muestre modo claro u oscuro
+                if (localStorage.getItem('modo') === 'oscuro') {
+                    document.documentElement.setAttribute('data-modo', 'oscuro');
+                }
+          
+                function cambiarModo() {
+                    var modoActual = document.documentElement.getAttribute('data-modo');
+                    var nuevoModo = (modoActual === 'claro') ? 'oscuro' : 'claro';
+                    document.documentElement.setAttribute('data-modo', nuevoModo);
+                    localStorage.setItem('modo', nuevoModo);
+                }
+        //Para que el nombre de usuario se muestre en las distintas páginas
+        if (sessionStorage.getItem('usuario')) {
+          mostrarNombreUsuario();
+      }
+    
+      function mostrarNombreUsuario() {
+          var usuario = sessionStorage.getItem('usuario');
+          document.getElementById('usuario').textContent = 'Usuario: ' + usuario;
+      }
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <iframe src="https://wpalvaroguerrero.000webhostapp.com/CancionesXML/LetraSabaton.xml" title="Cancion Sabaton" heigth="100vh" width="100%"></iframe>
+
+</body>
+</html>

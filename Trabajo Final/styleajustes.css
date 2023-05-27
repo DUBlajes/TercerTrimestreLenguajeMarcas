@@ -1,0 +1,57 @@
+@import url("stylemenu.css");
+
+#usuario {
+    font-size: larger;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-top: 5%;
+    margin-right: 20px;
+}
+
+/*Meter aquí css para modificar los botones y la localización*/
+
+[data-modo="oscuro"] {
+    background-color: #212121;
+    color: #ffffff;
+  }
+  
+  [data-modo="oscuro"] h1 {
+    color: #ffffff;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: rgb(104, 18, 18);
+    color: #f0f0f0;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  [data-modo="oscuro"] button {
+    background-color: #f0f0f0;
+    color: rgb(104, 18, 18);
+    font-weight: bold;
+  }
+
+  /*Para botones de cambiar fuente y color*/
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  select, input[type="color"] {
+    padding: 5px;
+    margin-bottom: 10px;
+  }

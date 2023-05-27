@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<!--Autor: Álvaro Guerrero
+Trabajo Final 3er Trimestre
+Lenguajes de Marcas-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Final Lenguaje de Marcas - Álvaro Guerrero</title>
+    <link rel="stylesheet" href="stylemenu.css">
+    
+</head>
+
+<body>
+    <nav>
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+        <div>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="./xml.html">XML</a></li>
+                <li><a href="./p2.html">Pathologic Classic HD</a></li>
+                <li><a href="./ajustes.html">Ajustes</a></li>
+                <li><a href="#vModal">Modal</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</div>
+<br>
+<br>
+<br>
+<br>
+    <p id="textoPresentacion">Bienvenidos al proyecto de traduccion del videojuego Pathologic Classic HD al castellano.</p>
+    <br>
+<br>
+        <div id="fotoportada">
+            <img class="fotoportada" alt="presentacion" src="./images/maxresdefault (1).jpg">
+        </div>
+<br>
+<br>
+<header>
+        Pathologic Classic HD es un videojuego de culto que ha cautivado a jugadores de todo el mundo con su atmosfera unica y su narrativa envolvente. Sin embargo, hasta ahora, solo estaba disponible en ingles y ruso, lo que limitaba su accesibilidad a los jugadores de habla hispana.
+        <br>
+        <br>
+        Nuestro objetivo es cambiar eso y llevar esta increible experiencia a un publico mas amplio. Nos hemos embarcado en este desafiante proyecto de traduccion para brindar a los jugadores hispanohablantes la oportunidad de sumergirse en la intrigante trama de Pathologic Classic HD y disfrutar de todos sus matices linguisticos.
+        <br>
+        <br>
+        Nos enfrentamos a la tarea de traducir no solo el texto del juego, sino tambien dialogos, descripciones, nombres de los personajes y todos los detalles que hacen de Pathologic Classic HD una experiencia inmersiva. Nuestro equipo de traductores altamente capacitados y apasionados esta trabajando arduamente para capturar la esencia de cada palabra y mantener la integridad artistica del juego original.
+        <br>
+        <br>
+        Entendemos la importancia de una buena localizacion para preservar la esencia y el significado detras de cada linea de dialogo y cada elemento de la historia. Nuestra meta es ofrecer una traduccion fluida y precisa que permita a los jugadores hispanohablantes disfrutar plenamente de la rica narrativa y las emocionantes mecanicas de juego que Pathologic Classic HD tiene para ofrecer.
+        <br>
+        <br>
+        Estamos emocionados de compartir este viaje con vosotros y esperamos que nuestra labor de traduccion enriquezca vuestra experiencia en el oscuro y fascinante mundo de Pathologic Classic HD.
+        <br>
+        <br>
+        Unete a nosotros mientras trabajamos para hacer que este increible videojuego cobre vida en castellano. Juntos, crearemos un nuevo capitulo en la historia de Pathologic Classic HD.
+        <br>
+        <br>
+        ¡Bienvenidos al desafio de la traduccion de Pathologic Classic HD al castellano!
+
+        <br>
+        <br>
+</header>    
+<div id="usuario">
+    Usuario sin identificar <span id="nombre-usuario"></span>
+</div>
+<div id="vModal">
+    <p><br>
+        <br>Trabajo final realizado por Álvaro Guerrero - 1º DAM<br>
+        <br>
+         Rúbrica:
+         <br>
+         <br>
+         -Subido el domingo
+         <br>
+         -La URL dirige a la página de inicio
+         <br>
+         <br>
+         -Menú igual en todas las páginas y, si ves esto, es porque abre y cierra el modal. Desde el menú se puede acceder a las distintas páginas de la web y al propio modal.
+         <br>
+         <br>
+         -4 páginas: Inicio, donde se da la bienvenida al usuario al proyecto de traducción del videojuego, XML donde se muestra la canción de Sabaton mediante un iframe (en la cual no se aplican los ajustes de cambio de tamaño de letra ni el modo nocturno o diurno), una tercera página donde se habla de la propia traducción del juego, con imágenes, trailer y porcentaje de avance y una cuarta que es la página de ajustes.
+         <br>
+         <br>
+         -Página de ajustes donde se podrá iniciar y cerrar sesión. También se podrá elegir el tamaño de la fuente en las distintas páginas y se podrá seleccionar modo claro u oscuro, para mostrarse en esta y el resto de pantallas. <br>
+         Al cerrar el navegador, el nombre de usuario se perderá. Sin embargo, el modo elegido (claro u oscuro) permanecerá. <br>
+         El nombre del usuario cambiará según el nombre que introduzca en el formulario y luego pulse "Iniciar sesión". Este nombre se mostrará en todas las pantallas, incluida el XML. Además, también cambiará de tamaño o color dependiendo de si se ha elegido modo nocturno o diurno.<br>
+         <br>
+         -Poco que añadir con respecto al modal. El tamaño de la fuente también cambia dependiendo del elegido por el usuario.
+         <br>
+         <br>
+         -XML que muestra mediante un iframe una canción de Sabaton, mi grupo favorito, y que suelo escuchar a menudo mientras traduzco este videojuego. En esta pagina no se van a aplicar los ajustes de cambio de tamaño de letra (excepto el nombre de usuario, que sí cambia) pero sí el modo nocturno o diurno, a pesar de que con este último la letra no se leería bien.
+         <br>
+         <br>
+         -JavaScript usado para el inicio y cierre de sesión, para el cambio de modo (claro u oscuro) y para el cambio de tamaño de la fuente.
+         <br>
+         <br>
+         -HTML usado para las distintas páginas.
+         <br>
+         <br>
+         -Nombre del usuario se mantiene visible en TODAS las páginas, y además su tamaño cambia según el tamaño que haya elegido el usuario.
+     <a href="#" id="cerrarModal"><button>Haz click aqui para cerrar</button></a>
+</p>
+</div>
+    <script>
+    //Para que el nombre de usuario se muestre en las distintas páginas
+    if (sessionStorage.getItem('usuario')) {
+        mostrarNombreUsuario();
+    }
+  
+    function mostrarNombreUsuario() {
+        var usuario = sessionStorage.getItem('usuario');
+        document.getElementById('usuario').textContent = 'Usuario: ' + usuario;
+    }
+        // Para que se muestre modo claro u oscuro
+        if (localStorage.getItem('modo') === 'oscuro') {
+            document.documentElement.setAttribute('data-modo', 'oscuro');
+        }
+  
+        function cambiarModo() {
+            var modoActual = document.documentElement.getAttribute('data-modo');
+            var nuevoModo = (modoActual === 'claro') ? 'oscuro' : 'claro';
+            document.documentElement.setAttribute('data-modo', nuevoModo);
+            localStorage.setItem('modo', nuevoModo);
+        }
+
+        //Para cambiar tamaño y color fuente
+
+        var fontSize = localStorage.getItem('fontSize');
+        //var fontColor = localStorage.getItem('fontColor');
+
+        // Aplicar estilos guardados en localStorage
+        if (fontSize) {
+            document.body.style.fontSize = fontSize;
+        }
+
+       /* if (fontColor) {
+            document.body.style.color = fontColor;
+        }*/
+    </script>
+</body>
+
+</html>
